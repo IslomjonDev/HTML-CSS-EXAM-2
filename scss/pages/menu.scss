@@ -1,0 +1,315 @@
+@use "./mixins";
+@use "./variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+#loading{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    opacity: 1;
+    transition: 1s;
+}
+
+#loading.loading-none{
+    z-index: -1;
+    opacity: 0;
+    background-color: transparent;
+    display: none;
+
+}
+
+@keyframes ldio-akmie3iqlx6 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ldio-akmie3iqlx6>div>div {
+    transform-origin: 100px 100px;
+    animation: ldio-akmie3iqlx6 3s linear infinite;
+    opacity: 1;
+}
+
+.ldio-akmie3iqlx6>div>div>div {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px 0 0 0;
+    transform-origin: 100px 100px;
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(1) {
+    animation-duration: 0.5s;
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(1)>div {
+    background: #e15b64;
+    transform: rotate(0deg);
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(2) {
+    animation-duration: 1s;
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(2)>div {
+    background: #f47e60;
+    transform: rotate(0deg);
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(3) {
+    animation-duration: 1s;
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(3)>div {
+    background: #f8b26a;
+    transform: rotate(0deg);
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(4) {
+    animation-duration: 1s;
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(4)>div {
+    background: #abbd81;
+    transform: rotate(0deg);
+}
+
+.loadingio-spinner-wedges-ibhz9d0moo {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: transparent;
+}
+
+.ldio-akmie3iqlx6 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    /* see note above */
+}
+
+.ldio-akmie3iqlx6 div {
+    box-sizing: content-box;
+}
+
+
+
+
+#backtop img {
+    width: 40px;
+    height: 40px;
+}
+#backtop {
+    position: fixed;
+    z-index: 99;
+    right: 50px;
+    bottom: -100px;
+    transition: 0.5s;
+  }
+ #backtop.backtop-show  {
+    bottom: 100px;
+}
+
+
+.home {
+    background-color: variables.$primary-color;
+}
+
+li {
+    list-style-type: none;
+}
+
+.navbar {
+    background-color: variables.$primary-color;
+    .offcanvas-body , .offcanvas-body ul {
+        gap: 30px;
+    }
+}
+.navbar button {
+    @include mixins.btn;
+}
+.navbar {
+    padding: 30px 0 !important;
+    background-color: variables.$primary-color;
+}
+
+.navbar-shrink  .navbar{
+padding: 15px 0 !important;
+transition: 0.5s;
+box-shadow: 0 0 15px 5px red;
+}
+.menu {
+    padding: 100px 0;
+}
+.menu-pack {
+    max-width:428px ;
+    background: variables.$primary-color;
+    padding: 50px 40px 20px;
+    border-radius: 20px;
+    h1 {
+        max-width: 308px;
+        margin-bottom: 20px;
+    }
+}
+.buttons button {
+    @include mixins.btn;
+    margin-bottom: 30px;
+    max-width: 180px;
+    background-color: transparent;
+    border: 1px solid #FFF;
+    color: #FFF;
+    padding: 8px 20px;
+}
+.buttons button:hover {
+    background-color: #FFF;
+    color: variables.$primary-color;
+    transition: 0.4s;
+}
+.menu-content {
+    gap: 80px;
+}
+.pack-eats {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 30px ;
+    .item {
+        max-width:400px ;
+        h2 {
+            font-size: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: variables.$primary-color;
+        }
+    }
+   }
+
+   @media (max-width:700px) {
+    .pack-eats {
+        grid-template-columns:auto;
+    }
+}
+
+
+
+
+#owl-demo .item {
+padding: 30px 20px;
+max-width:450px ;
+
+p {
+    color: #AAA;
+}
+}
+.item-content span img {
+    width: 16px;
+    height: 16px;
+}
+.item-content {
+    gap:25px ;
+  
+    span {
+        gap: 10px;
+        align-items: center;
+        p {
+            max-width:64px ;
+            margin-bottom:0px;
+        }
+    }
+   
+}
+
+.instagramm {
+    padding: 100px 0;
+    background-color: #F4F4F4; 
+    p {
+        max-width:491px ;
+        color: #AAA;
+font-family: Open Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 175%; /* 28px */
+letter-spacing: 0.64px;
+    }   
+    button {
+        @include mixins.btn ;
+        background-color: #fff;
+            border: 1px solid variables.$primary-color;
+            color: variables.$primary-color;
+            padding: 10px 30px ;
+        
+    }
+     button:hover {
+        color: #FFF;
+        background-color: variables.$primary-color;
+        transition: 0.4s;
+    }
+}
+.insta-content {
+    gap: 60px;
+}
+
+
+
+
+.newsletter {
+    position: relative;
+    bottom: -200px;
+    .newsletter-title {
+        background: variables.$primary-color;
+        padding: 100px 0;
+        border-radius: 20px;
+border: 1px solid rgba(255, 255, 255, 0.40);
+background: variables.$primary-color;
+box-shadow: 22px 30px 95px 1px rgba(86, 86, 86, 0.20);
+
+    }
+}
+.form input {
+    max-width: 635px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+border: 1px solid rgba(245, 239, 219, 0.50);
+
+}
+.form button {
+@include mixins.btn; 
+background: transparent;
+}
+
+
+
+.footer {
+    background-color: variables.$primary-color;
+    padding-top: 290px;
+    padding-bottom: 50px;
+    .footer-card2 p {
+        max-width:438px ;
+        margin: 0 auto;
+        
+        padding: 30px 0;
+    }
+    .contacts {
+        gap: 20px;
+    }
+}
